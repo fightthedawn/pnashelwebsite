@@ -1,0 +1,14 @@
+# 480 weeks
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+ 
+# 2 DAYS
+<FilesMatch ".(xml|txt)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+ 
+#30 Secs
+<FilesMatch ".(html|htm|js|css|php)$">
+Header set Cache-Control "max-age=30, must-revalidate"
+</FilesMatch>
